@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "laravelcollective/html": "^6.3",
-        "roumen/sitemap": "^8.0"
+        "roumen/sitemap": "^8.0",
+        "genealabs/laravel-model-caching": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

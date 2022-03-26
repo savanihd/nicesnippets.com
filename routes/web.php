@@ -34,7 +34,7 @@ Route::get('send/notification', 'TokenController@sendNotification')->name('send.
 Route::get('stripe/payment/response', 'FrontController@stripeWebhook')->name('stripe.response');
 
 Route::get('new-server', function(){
-    echo "demo";
+    echo \App\Models\Blog::first();
 });
 
 Route::get('/',['as'=>'home','uses'=>'BlogController@blogIndex']);

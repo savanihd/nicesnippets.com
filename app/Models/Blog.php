@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Config;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Blog extends Model
 {
-    use HasFactory;
+    use HasFactory, Cachable;
 
 
     protected $table = 'blogs';
