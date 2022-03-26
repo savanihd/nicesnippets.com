@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Tags extends Model
 {
-    use HasFactory;
+    use HasFactory, Cachable;
 
     protected $fillable = ['tag','slug'];
 
