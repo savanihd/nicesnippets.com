@@ -9,6 +9,7 @@ use App\Models\BlogCategory;
 use App\Models\BlogCategoryConnect;
 use App\Models\ImageUpload;
 use App\Models\RelatedBlogs;
+use Illuminate\Support\Str;
 use Validator;
 
 class BlogController extends AdminController
@@ -71,7 +72,7 @@ class BlogController extends AdminController
                 $input['image'] = ImageUpload::upload('/upload/blog/',$request->file('image'));
             }
 
-            $input['slug'] = str_slug( $input['title']);
+            $input['slug'] = Str::slug( $input['title']);
 
             $input['is_publish'] = isset($input['is_publish']) ? '1' : '0';
             if (isset($input['publish_date']) && !empty($input['publish_date'])) {

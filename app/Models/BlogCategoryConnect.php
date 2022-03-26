@@ -18,7 +18,7 @@ class BlogCategoryConnect extends Model
 
     public function addBlogCategoryConnect($inputi)
     {
-        return static::create(array_only($inputi,$this->fillable));
+        return static::create($inputi);
     }
 
     public function findBlogCategoryConnect($id)
@@ -28,7 +28,7 @@ class BlogCategoryConnect extends Model
 
     public function updateBlogCategoryConnect($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update($input);
     }
 
     public function destroyBlogCategoryConnect($id)

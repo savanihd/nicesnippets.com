@@ -49,7 +49,7 @@ class Blog extends Model
     
     public function addBlog($input)
     {
-        return static::create(array_only($input,$this->fillable));
+        return static::create($input);
     }
 
     public function findBlog($id)
@@ -59,7 +59,7 @@ class Blog extends Model
 
     public function updateBlog($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update($input);
     }
 
     public function destroyBlog($id)
