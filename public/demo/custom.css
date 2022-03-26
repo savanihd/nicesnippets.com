@@ -1,0 +1,126 @@
+.ptb-5{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+.social-media a{
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+}
+
+.header-right span,
+.logo a span{
+	color: #F76518;
+}
+.mainmenu ul.nav.navbar-nav li.active a, .mainmenu ul.nav.navbar-nav li a:hover{
+	background-color: #F76518;
+}
+
+.header-right{
+	padding: 18px 0px;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 32px;
+	float: right;
+} 
+.is-sticky .mainmenu ul.nav.navbar-nav li:hover a,
+.is-sticky .mainmenu ul.nav.navbar-nav li.active a{
+	color: #fff;
+}
+.is-sticky .mainmenu ul.nav.navbar-nav li a{
+	color: #333;
+}
+.is-sticky .header-bottom-area{ 
+	background-color: #fff;
+	box-shadow: 0px 0px 10px 0px #333;
+}
+
+.note-bg-one,
+.note-bg-three{
+	background-color: rgba(247, 101, 24, 0.7);
+}
+.footer-contact li i,
+.testimonial-content a h3 span,
+.slider-content h1 span{
+	color: #F76518;
+}
+.slider-content a.read-more:hover{
+	background-color: #F76518;
+	border-color: #F76518;
+}
+a#scrollUp,
+.event-date,
+.news-style .owl-controls .owl-nav div,
+.event-style .owl-controls .owl-nav div,
+.single-instructor:hover .instructor-content,
+.title-bottom-left:before,
+.title-bottom-center:before,
+.title-bottom-left:after,
+.title-bottom-center:after,
+.choose-icon:after{
+	background-color: #F76518;
+}
+.instructor-social a{
+	border-color: #F76518;
+}
+.choose-icon{
+	border-color: #333;
+}
+.copy-right span i,
+.counter-icon i,
+a.learn-more,
+.call-to-action button,
+.title-bottom-center i,
+.title-bottom-left i{
+	color: #F76518;
+}
+
+.instructor-social a:hover,
+a:hover.learn-more{
+	background:#F76518;
+	border-color:#F76518; 
+}
+
+.testimonial-img{
+	width: 960px;
+	height: 250px;
+	padding: 0px 3px;
+}
+.testimonial-img .sub{
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+.testimonial-img .sub img{
+	margin-left: 20px;
+	width:200px;
+	height: 200px;
+}
+.testimonial-img .sub a{
+	color: #fff;
+}
+
+.choose-icon img{
+	padding-left: 35px;
+}
+.choose-icon:after{
+	width: 85px;
+	height: 85px;
+	top: 0px;
+}
+.choose-icon{
+	width: 105px;
+	height: 105px;
+}

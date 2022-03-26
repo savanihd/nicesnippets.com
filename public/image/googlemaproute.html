@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Jquery City Dropdown To Google Map Show Route Example</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&amp&callback=initMap&libraries=&v=weekly" defer></script>
+<style type="text/css">
+  /* Optional: Makes the sample page fill the window. */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    line-height: 30px;
+    padding-left: 10px;
+  }
+  #map{
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+  }
+  </style>
+</head>
+<body>
+  <div id="floating-panel">
+    <b>Start: </b>
+    <select id="start">
+      <option value="rajkot">Rajkot</option>
+      <option value="nashik">Nashik</option>
+      <option value="indore">Indore</option>
+      <option value="vadodara">Vadodara</option>
+    </select>
+    <b>End: </b>
+    <select id="end">
+      <option value="rajkot">Rajkot</option>
+      <option value="nashik">Nashik</option>
+      <option value="indore">Indore</option>
+      <option value="vadodara">Vadodara</option>
+    </select>
+  </div>
+  <div id="map"></div>
+</body>
+ <script>
+  function initMap() {
+    const directionsService = new google.maps.DirectionsService();
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 7,
+      center: { lat: 20.00, lng: 77.00 },
+    });
+    directionsRenderer.setMap(map);
+
+    const onChangeHandler = function () {
+      calculateAndDisplayRoute(directionsService, directionsRenderer);
+    };
+    document
+    .getElementById("start")
+    .addEventListener("change", onChangeHandler);
+    document
+    .getElementById("end")
+    .addEventListener("change", onChangeHandler);
+  }
+
+  function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    directionsService.route(
+    {
+      origin: {
+        query: document.getElementById("start").value,
+      },
+      destination: {
+        query: document.getElementById("end").value,
+      },
+      travelMode: google.maps.TravelMode.DRIVING,
+    },
+    (response, status) => {
+      if (status === "OK") {
+        directionsRenderer.setDirections(response);
+      } else {
+        window.alert("Directions request failed due to " + status);
+      }
+    }
+    );
+  }
+  </script>
+</html>

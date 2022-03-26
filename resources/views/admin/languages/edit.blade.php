@@ -1,0 +1,85 @@
+@extends($adminTheme)
+
+@section('title')
+Edit Language
+@endsection
+
+@section('content')
+<section class="content-header">
+	<div class="row">
+		<div class="col-md-6">
+  			<h2>Edit Language</h2>
+		</div>
+		<div class="col-md-6 text-right content-header-btn">
+			<a href="{{ route('languages.index') }}" class="btn btn-primary btn-flat"><i class="fa fa-arrow-left"></i> Back</a>
+		</div>
+	</div>
+</section>
+<section class="content">
+	<div class="box box-primary">
+		<div class="box-header with-border">
+		  <h3 class="box-title">Edit Language</h3>
+		</div>
+		<!-- /.box-header -->
+		<!-- form start -->
+        {!! Form::model($language, ['method' => 'PATCH','route' => ["languages.update", $language->id],'files'=>true]) !!}
+		  <div class="box-body">
+			<div class="row">
+		  		<div class="col-md-6">
+		  			<div class="form-group">
+				      <label>Name</label>
+                      {!! Form::text('name', old('name'), array('placeholder' => 'Enter Name','class' => 'form-control')) !!}
+                      @if($errors->has('name'))
+                        <div><span class="error">{{ $errors->first('name')}}</span></div>
+                      @endif
+				    </div>		
+		  		</div>
+		  		<div class="col-md-6">
+		  			<div class="form-group">
+				      <label>Image</label>
+                      {!! Form::file('image', array('class' => 'form-control')) !!}
+				      @if($errors->has('image'))
+                        <div><span class="error">{{ $errors->first('image')}}</span></div>
+                      @endif
+				    </div>
+		  		</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-6">
+		  			<div class="form-group">
+				      <label>Description</label>
+                      {!! Form::textarea('description', old('description'), array('placeholder' => 'Enter Description','class' => 'form-control','rows'=>'3')) !!}
+                      @if($errors->has('description'))
+                        <div><span class="error">{{ $errors->first('description')}}</span></div>
+                      @endif
+				    </div>		
+		  		</div>
+		  		<div class="col-md-6">
+		  			<div class="form-group">
+				      <label>Meta Title</label>
+				      {!! Form::textarea('meta_title', old('meta_title'), array('placeholder' => 'Enter Meta Keywords','class' => 'form-control','rows'=>'3')) !!}
+				      @if($errors->has('meta_title'))
+                        <div><span class="error">{{ $errors->first('meta_title')}}</span></div>
+                      @endif
+				    </div>
+		  		</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="col-md-6">
+		  			<div class="form-group">
+				      <label>Meta Description</label>
+                      {!! Form::textarea('meta_description', old('meta_description'), array('placeholder' => 'Enter Meta Description','class' => 'form-control','rows'=>'3')) !!}
+                      @if($errors->has('meta_description'))
+                        <div><span class="error">{{ $errors->first('meta_description')}}</span></div>
+                      @endif
+				    </div>		
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="box-footer">
+		    <button type="submit" class="btn btn-primary btn-flat">Submit</button>
+		  </div>
+        {!! Form::close() !!}
+	</div>
+</section>
+@endsection

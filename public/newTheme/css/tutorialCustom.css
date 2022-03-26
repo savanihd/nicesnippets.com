@@ -1,0 +1,121 @@
+.sidebar-nav-fixed ul li a{
+	font-size: 17px !important;
+}
+.card-body .description p{
+	font-size: 16px;
+}
+body{
+	font-family: 'Ropa Sans', sans-serif;
+	background-color: #F5F7FA;	
+}
+a{
+	color: #404E67;
+}
+.navbar-fixed-top{
+	border-width: 0px;
+}
+.navbar{
+	background-color: transparent !important;
+	background-image: linear-gradient(to right,#404E67 0,#6F85AD 100%);
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	color: #FFF;
+	font-weight: bold;
+	background: transparent;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a{
+	color: #FFF;
+}
+.sidebar-nav-fixed .nav li.active{
+	background: #EDEDEE;
+}
+.logo{
+	padding: 0px;
+}
+.navbar-brand{
+	padding: 0px 0px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #404E67;
+}
+.navbar-header{
+	width: 100%;
+	background: #fff;
+}
+.navbar-header img{
+	display: unset;
+	width: 169px;
+}
+.nav-header{
+	border-bottom:1px solid #EDEDEE;
+	padding:10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #404E67;
+}
+.contant{
+	margin-top: 50px;
+}
+.left-side{
+	background-color: #fff;
+	padding: 0px;
+	position: fixed;
+	overflow-y: auto;
+	box-shadow: 1px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.right-side{
+	margin-top: 30px;
+}
+.card{
+    margin-bottom: 1.875rem;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #FFFFFF;
+   	background-clip: border-box;
+}
+.card-header:first-child {
+    border-radius: -webkit-calc(0.25rem - 1px) -webkit-calc(0.25rem - 1px) 0 0;
+    border-radius: -moz-calc(0.25rem - 1px) -moz-calc(0.25rem - 1px) 0 0;
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-header {
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 0;
+    background-color: #FFFFFF;
+}
+.card .card-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: #404E67;
+}
+.card-body {
+    color: #404E67;
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
+
+.add-box{
+	min-height: 200px;
+	background: #fff;
+	padding: 15px;
+	margin-bottom: 15px;
+	-webkit-box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+}
+
+#footer{
+	padding: 5px 0px;
+	color: #fff;
+	text-align: center;
+	background-image: linear-gradient(to right,#404E67 0,#6F85AD 100%);
+}
