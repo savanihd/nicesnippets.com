@@ -64,7 +64,7 @@ class TutorialsController extends AdminController
 
         if ($validator->passes()) {
 
-            $input['slug'] = str_slug($input['topic_name']);
+            $input['slug'] = \Str::limit($input['topic_name']);
             $this->tutorial->addTutorial($input);
 
             notificationMsg('success',$this->crudMessage('add','tutorial'));
@@ -127,7 +127,7 @@ class TutorialsController extends AdminController
 
         if ($validator->passes()){
 
-            $input['slug'] = str_slug($input['topic_name']);
+            $input['slug'] = \Str::limit($input['topic_name']);
             $this->tutorial->updateTutorial($id ,$input);
 
             notificationMsg('success',$this->crudMessage('update','tutorial'));

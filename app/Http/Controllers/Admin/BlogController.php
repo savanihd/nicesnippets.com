@@ -71,7 +71,7 @@ class BlogController extends AdminController
                 $input['image'] = ImageUpload::upload('/upload/blog/',$request->file('image'));
             }
 
-            $input['slug'] = str_slug( $input['title']);
+            $input['slug'] = \Str::limit( $input['title']);
 
             $input['is_publish'] = isset($input['is_publish']) ? '1' : '0';
             if (isset($input['publish_date']) && !empty($input['publish_date'])) {
@@ -164,7 +164,7 @@ class BlogController extends AdminController
                 $input['publish_date'] = NULL;
             }
             
-            // $input['slug'] = str_slug( $input['title']);
+            // $input['slug'] = \Str::limit( $input['title']);
             $this->blog->updateBlog($id ,$input);
             $this->blogCategoryConnect->destroyBlogCategoryConnect($id);
 

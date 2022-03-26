@@ -58,7 +58,7 @@ class BlogCategoryController extends AdminController
         ]);
 
         if ($validator->passes()) {
-            $input['slug'] = str_slug( $input['name']);
+            $input['slug'] = \Str::limit( $input['name']);
 
             $this->blogCategory->addBlogCategory($input);
 
@@ -113,7 +113,7 @@ class BlogCategoryController extends AdminController
         ]);
 
         if ($validator->passes()){
-            $input['slug'] = str_slug( $input['name']);
+            $input['slug'] = \Str::limit( $input['name']);
             $this->blogCategory->updateBlogCategory($id ,$input);
 
             notificationMsg('success',$this->crudMessage('update','Blog Category'));
