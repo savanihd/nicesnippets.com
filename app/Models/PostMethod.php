@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 use Config;
+use Illuminate\Support\Arr;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class PostMethod extends Model
@@ -38,7 +39,7 @@ class PostMethod extends Model
 
     public function addPost($input)
     {
-      return static::create(array_only($input,$this->fillable));
+      return static::create(Arr::only($input,$this->fillable));
     }
 
     public function findPost($id)
@@ -48,7 +49,7 @@ class PostMethod extends Model
 
     public function updatePost($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update(Arr::only(,$this->fillable));
     }
 
     public function destroyPost($id)

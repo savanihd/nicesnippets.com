@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Arr;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -38,7 +39,7 @@ class User extends Authenticatable
 
     public function addUser($input)
     {
-      return static::create($input);
+      return static::create(Arr::only(,$this->fillable));
     }
 
     public function findUser($id)
@@ -48,7 +49,7 @@ class User extends Authenticatable
 
     public function updateUser($id, $input)
     {
-        return static::where('id',$id)->update($input);
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyUser($id)

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use Illuminate\Support\Arr;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Tags extends Model
@@ -36,7 +37,7 @@ class Tags extends Model
 
     public function updateTag($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyTag($id)

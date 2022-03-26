@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use Illuminate\Support\Arr;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Tag extends Model
@@ -19,7 +20,7 @@ class Tag extends Model
 
     public function createData($input)
     {
-        return static::create(array_only($input,$this->fillable));
+        return static::create(Arr::only(,$this->fillable));
     }
 
     public function tagsLists()

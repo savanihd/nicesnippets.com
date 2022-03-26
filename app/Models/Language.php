@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
@@ -20,7 +20,7 @@ class Language extends Model
 
     public function addLanguage($input)
     {
-        return static::create(array_only($input,$this->fillable));
+        return static::create($input);
     }
 
     public function findLanguage($id)
@@ -30,7 +30,7 @@ class Language extends Model
 
     public function updateLanguage($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update(Arr::only(,$this->fillable));
     }
 
     public function destroyLanguage($id)

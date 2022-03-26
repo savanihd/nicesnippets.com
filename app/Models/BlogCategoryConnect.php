@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
@@ -28,7 +29,7 @@ class BlogCategoryConnect extends Model
 
     public function updateBlogCategoryConnect($id, $input)
     {
-        return static::where('id',$id)->update($input);
+        return static::where('id',$id)->update(Arr::only(,$this->fillable));
     }
 
     public function destroyBlogCategoryConnect($id)

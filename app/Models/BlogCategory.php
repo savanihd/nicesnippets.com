@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
@@ -23,7 +24,7 @@ class BlogCategory extends Model
     
     public function addBlogCategory($input)
     {
-        return static::create(array_only($input,$this->fillable));
+        return static::create(Arr::only($input,$this->fillable));
     }
 
     public function findBlogCategory($id)
@@ -33,7 +34,7 @@ class BlogCategory extends Model
 
     public function updateBlogCategory($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyBlogCategory($id)

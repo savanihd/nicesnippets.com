@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Support\Arr;
 
 class PostTags extends Model
 {
@@ -18,7 +19,7 @@ class PostTags extends Model
 
     public function createData($input)
     {
-        return static::create(array_only($input,$this->fillable));
+        return static::create(Arr::only(,$this->fillable));
     }
 
     public function getPostTagIdArray($post_id)

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 use Config;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
@@ -49,7 +50,7 @@ class Blog extends Model
     
     public function addBlog($input)
     {
-        return static::create($input);
+        return static::create(Arr::only(,$this->fillable));
     }
 
     public function findBlog($id)
@@ -59,7 +60,7 @@ class Blog extends Model
 
     public function updateBlog($id, $input)
     {
-        return static::where('id',$id)->update($input);
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyBlog($id)

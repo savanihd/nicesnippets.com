@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Support\Arr;
 
 class Tutorial extends Model
 {
@@ -24,7 +25,7 @@ class Tutorial extends Model
 
     public function addTutorial($input)
     {
-        return static::create(array_only($input,$this->fillable));
+        return static::create(Arr::only($input,$this->fillable));
     }
 
     public function findTutorial($id)
@@ -34,7 +35,7 @@ class Tutorial extends Model
 
     public function updateTutorial($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyTutorial($id)
