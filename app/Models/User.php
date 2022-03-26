@@ -16,30 +16,43 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email','password','avatar','is_admin'
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * The attributes that should be hidden for arrays.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function getUser()
+    {
+      return static::paginate(10);
+    }
+
+    public function addUser($input)
+    {
+      return static::create(array_only($input,$this->fillable));
+    }
+
+    public function findUser($id)
+    {
+      return static::find($id);
+    }
+
+    public function updateUser($id, $input)
+    {
+        return static::where('id',$id)->update(array_only($input,$this->fillable));
+    }
+
+    public function destroyUser($id)
+    {
+        return static::where('id',$id)->delete();
+    }
 }

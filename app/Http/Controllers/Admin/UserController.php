@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
-use App\User;
+use App\Models\User;
 use Validator;
 use App\Models\ImageUpload;
 
