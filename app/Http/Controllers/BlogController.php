@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Blog;
-use App\BlogCategory;
-use App\BlogCategoryConnect;
-use App\FrontSettings;
-use App\Tag;
-use App\RelatedBlogs;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\BlogCategoryConnect;
+use App\Models\FrontSettings;
+use App\Models\Tag;
+use App\Models\RelatedBlogs;
 use DB;
 use Artisan;
 

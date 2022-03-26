@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\FrontSettings;
+use App\Models\FrontSettings;
 use Validator;
 
 class SettingController extends AdminController

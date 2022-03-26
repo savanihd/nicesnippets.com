@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use App\User;
 use Validator;
-use App\ImageUpload;
+use App\Models\ImageUpload;
 
 class UserController extends AdminController
 {

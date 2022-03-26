@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Tag;
-use App\PostTags;
+use App\Models\Tag;
+use App\Models\PostTags;
 use DB;
 
 class TagController extends FrontController
