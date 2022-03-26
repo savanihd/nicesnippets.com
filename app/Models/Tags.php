@@ -37,7 +37,7 @@ class Tags extends Model
 
     public function updateTag($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyTag($id)
