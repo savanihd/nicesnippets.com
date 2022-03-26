@@ -172,7 +172,7 @@
 					 		<h5>{{ $value->title }}</h5>
 					 	</div>
 					 	<div class="col-md-12">
-					 		 <p>{{ strip_tags(str_limit($value->body,160)) }}</p>
+					 		 <p>{{ strip_tags(Str::limit($value->body,160)) }}</p>
 					 	</div>
 					 </div>	
 					</div>

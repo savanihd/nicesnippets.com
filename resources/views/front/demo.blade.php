@@ -71,7 +71,7 @@
   	<section>
 	    <h1>Live Demo - {{ $post->title }}</h1>
 	    <p class="desc-p">
-		    See Free Live Demo example of {{ str_limit($post->body, 300) }}
+		    See Free Live Demo example of {{ Str::limit($post->body, 300) }}
 	    </p>
 	    {{-- 
 	    <a class="full-screen" title="Click to Full Screen">Full Screen</a>

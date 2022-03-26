@@ -15,7 +15,7 @@
         if($routeName == 'chatter.discussion.showInCategory'){
             $t = $discussion->title;
             $string = preg_replace("/\s|&nbsp;/",' ',strip_tags($posts->first()->body));
-            $d = str_limit($string, 180);
+            $d = Str::limit($string, 180);
         }
     @endphp
 

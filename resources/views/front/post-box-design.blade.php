@@ -10,7 +10,7 @@
             </figure>
         @endif
     </a>    
-    <h2><a href="{{ route('post.detail',$post->slug) }}" title="{{ $post->title }}">{{ str_limit($post->title,60) }}</a></h2>
+    <h2><a href="{{ route('post.detail',$post->slug) }}" title="{{ $post->title }}">{{ Str::limit($post->title,60) }}</a></h2>
     <ul class="blog-post-info list-inline">
         <li>
             <a href="#">
@@ -31,7 +31,7 @@
             </a>
         </li>
     </ul>
-    <p>{{ str_limit($post->body,80) }}</p>
+    <p>{{ Str::limit($post->body,80) }}</p>
     <a href="{{ route('post.detail',$post->slug) }}" class="btn btn-reveal btn-default pull-right">
         <i class="fa fa-plus"></i>
         <span>Read More</span>

@@ -84,11 +84,6 @@
 
 			$rr = '</strong><div class="row"><div class="col-md-6"><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Middle Box 1 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5716626356528112" data-ad-slot="4377210275" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div><div class="col-md-6"><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Middle Box - 2 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5716626356528112" data-ad-slot="6476211261" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div></div><br><div id = "v-nicesnippets"></div>';
 
-            // Video Ads
-            {{--
-            '<script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.vdo.ai/core/v-nicesnippets/vdo.ai.js");</script>';
-            --}}
-
 			$des = str_replace_description("</strong>", $rr, $des);
 
 		@endphp

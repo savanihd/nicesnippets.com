@@ -30,7 +30,7 @@
 
 	    <h1>Free Download Code - {{ $postZip->title }} </h1>
 	    <p class="desc-p">
-	    	<small>Free Download Script Code of {{ str_limit($postZip->body, 300) }}</small><br>
+	    	<small>Free Download Script Code of {{ Str::limit($postZip->body, 300) }}</small><br>
 	    </p>
 
 	    <center>

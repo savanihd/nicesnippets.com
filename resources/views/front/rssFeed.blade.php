@@ -47,7 +47,7 @@
 				</image>
 				
 				<?php
-					$p = str_replace('—','',str_limit($value->body,300));
+					$p = str_replace('—','',Str::limit($value->body,300));
 					$p = str_replace('&','',$p);
 					$p = str_replace('“','',$p);
 					$p = str_replace('”','',$p);

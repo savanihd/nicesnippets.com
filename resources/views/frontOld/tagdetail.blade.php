@@ -33,9 +33,9 @@
 					@endif
 		        </a>
 		        <h3>
-		            <a href="{{ route('post.detail',$tagPage->slug) }}" title="{{ $tagPage->title }}">{{ str_limit($tagPage->title,55) }}</a>
+		            <a href="{{ route('post.detail',$tagPage->slug) }}" title="{{ $tagPage->title }}">{{ Str::limit($tagPage->title,55) }}</a>
 		        </h3>
-		        <p>{{ str_limit($tagPage->body,90) }}</p>
+		        <p>{{ Str::limit($tagPage->body,90) }}</p>
 	        </div>
 	    </div>
     	@endforeach

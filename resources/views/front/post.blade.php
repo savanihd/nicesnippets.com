@@ -250,7 +250,7 @@
 					@foreach($randompost as $post)
 			    		<ul>
 				    		<li>
-				    			<a href="{{ route('post.detail',$post->slug) }}">{{ str_limit($post->title) }}</a>
+				    			<a href="{{ route('post.detail',$post->slug) }}">{{ Str::limit($post->title) }}</a>
 				    		</li>
 			    		</ul>
 					@endforeach
@@ -264,7 +264,7 @@
 					@foreach($randomblogs as $blog)
 			    		<ul>
 				    		<li>
-				    			<a href="{{ route('blog.detail',$blog->slug) }}" target="_blank">{{ str_limit($blog->title) }}</a>
+				    			<a href="{{ route('blog.detail',$blog->slug) }}" target="_blank">{{ Str::limit($blog->title) }}</a>
 				    		</li>
 			    		</ul>
 					@endforeach
@@ -280,7 +280,7 @@
 			    	<ul>
 						@foreach($randomblogpost as $blogpost)
 					    		<li class="blog-post">
-					    			<a href="{{ route('blog.detail',$blogpost->slug) }}" target="_blank">{{ str_limit($blogpost->title) }}</a>
+					    			<a href="{{ route('blog.detail',$blogpost->slug) }}" target="_blank">{{ Str::limit($blogpost->title) }}</a>
 					    		</li>
 						@endforeach
 			    	</ul>

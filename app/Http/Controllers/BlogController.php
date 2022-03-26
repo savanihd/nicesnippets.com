@@ -56,18 +56,14 @@ class BlogController extends Controller
         if (!empty($blog->image)) {
             view()->share('meta_image',asset('/upload/blog/'.$blog->image));
         }
-        $recommendedBlogs = '';
+
     	$latestBlogLimit = $this->blog->getLatestBlogsLimit();
         $randomPosts = $this->blog->where('is_publish','1')->orderBy(\DB::raw('RAND()'))->take(10)->get();
         $blogCat = $blog->blogCategoryConnect->pluck('id')->all();
         $randomPostSidebar = $this->blogcategoryconnect->getRandom($blogCat);
         $relatedBlogs = RelatedBlogs::where('blog_id',$blog->id)->first();
-        if (!empty($relatedBlogs)) {
-            $recommendedBlogs = json_decode($relatedBlogs->body);
-        }
-        $allBlogs = Blog::all();
 
-    	return view('blog.blogDetail',compact('blog','latestBlogLimit', 'randomPosts','randomPostSidebar','recommendedBlogs','allBlogs'));
+    	return view('blog.blogDetail',compact('blog','latestBlogLimit', 'randomPosts','randomPostSidebar'));
     }
 
     public function blogCat($slug)

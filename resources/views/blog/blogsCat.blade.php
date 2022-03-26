@@ -19,7 +19,7 @@
               <hr>
           </div>
           <div class="col-md-12 hed-sub-des">
-            <p>{{ strip_tags(str_limit($value->body,265)) }}</p>
+            <p>{{ strip_tags(Str::limit($value->body,265)) }}</p>
           </div>
         </div>
   @endforeach

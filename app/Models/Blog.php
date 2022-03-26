@@ -11,7 +11,6 @@ class Blog extends Model
 {
     use HasFactory, Cachable;
 
-
     protected $table = 'blogs';
     
     protected $fillable = [
@@ -80,9 +79,7 @@ class Blog extends Model
 
     public function getLatestBlogsLimit()
     {
-        return \Cache::remember('latest-blog-limit',3600, function () {
-            return static::where('is_publish', '1')->latest()->take(5)->get();
-        });
+        return static::where('is_publish', '1')->latest()->take(5)->get();
     }
     
     public function blogCategoryConnect()

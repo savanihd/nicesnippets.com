@@ -12,9 +12,9 @@
         </a>
         <div class="post-detail">
             <h3>
-                <a href="{{ route('post.detail',$post->slug) }}" title="{{ $post->title }}">{{ str_limit($post->title,45) }}</a>
+                <a href="{{ route('post.detail',$post->slug) }}" title="{{ $post->title }}">{{ Str::limit($post->title,45) }}</a>
             </h3>
-            <p>{{ str_limit($post->body,70) }}</p>
+            <p>{{ Str::limit($post->body,70) }}</p>
         </div>
         <!-- <div class="tag-list">
         	<i class="fa fa-tags"></i>
