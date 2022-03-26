@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Tutorial extends Model
 {
-    use HasFactory;
+    use HasFactory, Cachable;
 
     protected $fillable = ['language_id','topic_name','slug','description','example_demo','html_code','css_code','js_code','sort','meta_title','meta_description'];
 

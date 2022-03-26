@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class ImageUpload extends Model
 {
-    use HasFactory;
+    use HasFactory, Cachable;
 
     public static function removeFile($path)
     {
