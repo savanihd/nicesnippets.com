@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Tag;
-use App\PostTags;
-use App\PostMethod;
-use App\Language;
-use App\Tutorial;
-use App\Blog;
+use App\Models\Tag;
+use App\Models\PostTags;
+use App\Models\PostMethod;
+use App\Models\Language;
+use App\Models\Tutorial;
+use App\Models\Blog;
 
 class HomeController extends FrontController
 {

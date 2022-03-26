@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use Validator;
-use App\PostMethod;
+use App\Models\PostMethod;
 use DB;
-use App\PostTags;
+use App\Models\PostTags;
 
 class PostController extends AdminController
 {
