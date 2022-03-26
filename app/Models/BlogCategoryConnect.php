@@ -29,7 +29,7 @@ class BlogCategoryConnect extends Model
 
     public function updateBlogCategoryConnect($id, $input)
     {
-        return static::where('id',$id)->update(Arr::only(,$this->fillable));
+        return static::where('id',$id)->update(Arr::only($input,$this->fillable));
     }
 
     public function destroyBlogCategoryConnect($id)

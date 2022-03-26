@@ -50,7 +50,7 @@ class Blog extends Model
     
     public function addBlog($input)
     {
-        return static::create(Arr::only(,$this->fillable));
+        return static::create(Arr::only($input,$this->fillable));
     }
 
     public function findBlog($id)

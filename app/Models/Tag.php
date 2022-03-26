@@ -20,7 +20,7 @@ class Tag extends Model
 
     public function createData($input)
     {
-        return static::create(Arr::only(,$this->fillable));
+        return static::create(Arr::only($input,$this->fillable));
     }
 
     public function tagsLists()
