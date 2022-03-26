@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User; 
+use Illuminate\Support\Facades\Request;
 use App\Models\PostMethod;
 use App\Models\Tutorial;
 use App\Models\Blog;

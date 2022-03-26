@@ -38,7 +38,7 @@ class User extends Authenticatable
 
     public function addUser($input)
     {
-      return static::create(array_only($input,$this->fillable));
+      return static::create($input);
     }
 
     public function findUser($id)
@@ -48,7 +48,7 @@ class User extends Authenticatable
 
     public function updateUser($id, $input)
     {
-        return static::where('id',$id)->update(array_only($input,$this->fillable));
+        return static::where('id',$id)->update($input);
     }
 
     public function destroyUser($id)
