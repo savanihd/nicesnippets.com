@@ -30,7 +30,7 @@
 
     <?php 
 
-    $settingsFrontData = \App\FrontSettings::pluck('value','type')->all();
+    $settingsFrontData = \App\Models\FrontSettings::pluck('value','type')->all();
 
     echo $settingsFrontData['head-tag'];
 
