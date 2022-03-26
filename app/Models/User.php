@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function addUser($input)
     {
-      return static::create(Arr::only(,$this->fillable));
+      return static::create(Arr::only($this->fillable));
     }
 
     public function findUser($id)
