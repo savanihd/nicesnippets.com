@@ -84,7 +84,7 @@ class TagController extends AdminController
             {
                 $ainput = [];
                 $ainput['tag'] = $value;
-                $ainput['slug'] = str_slug($value);
+                $ainput['slug'] = \Str::limit($value);
                 $tagdata = DB::table('tags')->where('slug', $ainput['slug'])->first();
                 if(is_null($tagdata)){
                     $tagdata = $this->tagModel->createData($ainput);

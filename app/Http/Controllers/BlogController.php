@@ -70,7 +70,7 @@ class BlogController extends Controller
     {
 
         $blogsCat = $this->blogCategory->findBlogsCatUsingSlug($slug);
-        view()->share('meta_title',str_slug($blogsCat->name ?? 'test'));
+        view()->share('meta_title',\Str::limit($blogsCat->name ?? 'test'));
         view()->share('meta_description',$blogsCat->meta_description ?? 'test');
         view()->share('meta_keyword',$blogsCat->meta_description ?? 'test');
         $blogsCatDetail = $blogsCat->blogCategoryConnect()->orderBy('id' ,'DESC')->paginate(10);

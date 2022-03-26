@@ -214,7 +214,7 @@
 			<strong><i class="fa fa-tags" aria-hidden="true"></i> Tags:-</strong>
 			@if(!empty($postTags))
 				@foreach($postTags as $key=>$value)
-					<a href="{{ route('tag.pages',str_slug($value->tag)) }}" class="tag">
+					<a href="{{ route('tag.pages',Str::slug($value->tag)) }}" class="tag">
 						<span class="txt">{{ $value->tag }}</span><span class="num">{{ $value->totalPost }}</span>
 				    </a>
 				@endforeach
