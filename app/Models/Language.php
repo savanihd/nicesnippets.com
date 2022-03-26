@@ -30,7 +30,7 @@ class Language extends Model
 
     public function updateLanguage($id, $input)
     {
-        return static::where('id',$id)->update(Arr::only(,$this->fillable));
+        return static::where('id',$id)->update(Arr::only($this->fillable));
     }
 
     public function destroyLanguage($id)
