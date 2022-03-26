@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\AdminController;
-use App\Language;
+use App\Models\Language;
 use Validator;
-use App\ImageUpload;
+use App\Models\ImageUpload;
 
 class LanguageController extends AdminController
 {

@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
-use App\Blog;
-use App\BlogCategory;
-use App\BlogCategoryConnect;
-use App\ImageUpload;
-use App\RelatedBlogs;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\BlogCategoryConnect;
+use App\Models\ImageUpload;
+use App\Models\RelatedBlogs;
 use Validator;
 
 class BlogController extends AdminController

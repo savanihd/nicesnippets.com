@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Tags;
+use App\Models\Tags;
 use Validator;
 
 class TagsController extends AdminController

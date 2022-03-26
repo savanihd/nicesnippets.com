@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User; 
-use App\PostMethod;
-use App\Tutorial;
-use App\Blog;
-use App\ImageUpload;
-use App\BlogCategory;
+use App\Models\User; 
+use App\Models\PostMethod;
+use App\Models\Tutorial;
+use App\Models\Blog;
+use App\Models\ImageUpload;
+use App\Models\BlogCategory;
 use Validator;
 use Carbon\Carbon;
 use DB;

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Token;
+use App\Models\Token;
 
 class TokenController extends Controller
 {

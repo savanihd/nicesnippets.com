@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
-use App\BlogCategory;
+use App\Models\BlogCategory;
 use Validator;
 
 class BlogCategoryController extends AdminController

@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use DB;
-use App\Tag;
-use App\PostTags;
+use App\Models\Tag;
+use App\Models\PostTags;
 
 class TagController extends AdminController
 {

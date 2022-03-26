@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Language;
-use App\Tutorial;
+use App\Models\Language;
+use App\Models\Tutorial;
 
 
 class TutorialController extends FrontController

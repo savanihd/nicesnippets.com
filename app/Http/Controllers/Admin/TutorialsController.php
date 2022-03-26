@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
-use App\Tutorial;
-use App\Language;
+use App\Models\Tutorial;
+use App\Models\Language;
 use Validator;
 
 class TutorialsController extends AdminController
