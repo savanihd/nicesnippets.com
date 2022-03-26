@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\FrontSettings;
 use Validator;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class SettingController extends AdminController
 {

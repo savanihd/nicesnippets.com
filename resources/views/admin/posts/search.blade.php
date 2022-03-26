@@ -1,4 +1,4 @@
-<div class="panel panel-primary filter-panel {{Input::get("filter",false)?'filter-in':'filter-out'}}">
+<div class="panel panel-primary filter-panel {{Request::get("filter",false)?'filter-in':'filter-out'}}">
     <div class="panel-heading">
         <h3 class="panel-title"><strong>Searching</strong></h3>
     </div>
@@ -8,13 +8,13 @@
             <li>
                 <div class='form-group'>
                     {!! Form::label('filter[title][value]', 'Title:',array('class'=>'control-label')) !!}
-                    {!! Form::text('filter[title][value]',Input::get('filter.title.value'),array('class'=>'form-control','placeholder' => 'Title')) !!}{!! Form::hidden('filter[title][type]','7') !!}
+                    {!! Form::text('filter[title][value]',Request::get('filter.title.value'),array('class'=>'form-control','placeholder' => 'Title')) !!}{!! Form::hidden('filter[title][type]','7') !!}
                 </div>
             </li>
             <li>
                 <div class='form-group'>
                     {!! Form::label('filter[slug][value]', 'Slug:',array('class'=>'control-label')) !!}
-                    {!! Form::text('filter[slug][value]',Input::get('filter.slug.value'),array('class'=>'form-control','placeholder' => 'Slug')) !!}{!! Form::hidden('filter[slug][type]','7') !!}
+                    {!! Form::text('filter[slug][value]',Request::get('filter.slug.value'),array('class'=>'form-control','placeholder' => 'Slug')) !!}{!! Form::hidden('filter[slug][type]','7') !!}
                 </div>
             </li>
             <li>

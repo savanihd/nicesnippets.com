@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use App\Models\Blog;
 use App\Models\BlogCategory;
@@ -71,7 +71,7 @@ class BlogController extends AdminController
                 $input['image'] = ImageUpload::upload('/upload/blog/',$request->file('image'));
             }
 
-            $input['slug'] = \Str::limit( $input['title']);
+            $input['slug'] = str_slug( $input['title']);
 
             $input['is_publish'] = isset($input['is_publish']) ? '1' : '0';
             if (isset($input['publish_date']) && !empty($input['publish_date'])) {
@@ -164,7 +164,7 @@ class BlogController extends AdminController
                 $input['publish_date'] = NULL;
             }
             
-            // $input['slug'] = \Str::limit( $input['title']);
+            // $input['slug'] = str_slug( $input['title']);
             $this->blog->updateBlog($id ,$input);
             $this->blogCategoryConnect->destroyBlogCategoryConnect($id);
 
