@@ -34,7 +34,7 @@ class Blog extends Model
         
         if (!empty($input['filter']) && is_array($input['filter'])) {
             foreach ($input['filter'] as $column => $row) {
-                if ((!empty($column) && !empty($row["value"]) && is_array($row)) || $row["value"] == '0') {
+                if ((!empty($column) && !empty($row["value"]) && is_array($row))) {
                     $operator = Config::get("setting.type", 1)[$row["type"]];
                     if ($row["type"] == 7) {
                         $data = $data->where("blogs.".$column, $operator, "%{$row["value"]}%");
