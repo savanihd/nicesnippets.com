@@ -11,6 +11,7 @@ use App\Models\ImageUpload;
 use App\Models\RelatedBlogs;
 use Illuminate\Support\Str;
 use Validator;
+use Illuminate\Support\Arr;
 
 class BlogController extends AdminController
 {
@@ -154,7 +155,7 @@ class BlogController extends AdminController
                 }
                 $input['image'] = ImageUpload::upload('/upload/blog/',$request->file('image'));
             }else{
-                $input = array_except($input,['image']);  
+                $input = Arr::except($input,['image']);  
             }
 
             $input['is_publish'] = isset($input['is_publish']) ? '1' : '0';
