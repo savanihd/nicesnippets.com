@@ -226,3 +226,8 @@ Route::get('sitemap-blogs', function(){
 
 Route::get('/{languageSlug}/{tutorialSlug}',['as'=>'tutorialDetails','uses'=>'TutorialController@tutorialDetails']);
 
+Route::get('info', function(){
+
+        phpinfo();
+
+});
