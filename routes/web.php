@@ -228,6 +228,6 @@ Route::get('/{languageSlug}/{tutorialSlug}',['as'=>'tutorialDetails','uses'=>'Tu
 
 Route::get('info', function(){
 
-        phpinfo();
+        dd('phpinfo()');
 
 });
