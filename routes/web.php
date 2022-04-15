@@ -120,6 +120,8 @@ Route::group(['middleware' => ['auth','IsAdmin']], function () {
     // BlogController
     Route::resource('blogs','Admin\BlogController');
 
+    Route::get('/auto-post',['as'=>'admin.autoPost','uses'=>'Admin\HomeController@autoPost']);
+    
     Route::get('settings', array('as'=> 'front.settings', 'uses' => 'Admin\SettingController@index'));
     Route::post('settingsUpdate', array('as'=> 'front.settings.update', 'uses' => 'Admin\SettingController@create'));
 
@@ -226,8 +228,3 @@ Route::get('sitemap-blogs', function(){
 
 Route::get('/{languageSlug}/{tutorialSlug}',['as'=>'tutorialDetails','uses'=>'TutorialController@tutorialDetails']);
 
-Route::get('info', function(){
-
-        dd('phpinfo()');
-
-});

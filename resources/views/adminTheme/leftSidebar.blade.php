@@ -78,6 +78,11 @@
           <i class="fa fa-picture-o" aria-hidden="true"></i> <span>Image</span>
         </a>
       </li>
+      <li class="{{ Request::is('auto-post*') ? 'active' : '' }}">
+        <a href="{{ URL::route('admin.autoPost') }}">
+          <i class="fa fa-th"></i> <span>Auto Generate Post</span>
+        </a>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->
