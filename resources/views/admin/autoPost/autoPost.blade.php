@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          {!! Form::textarea('body', Request::get('body'), array('placeholder' => 'Description','class' => 'form-control user-name-edit ckeditor','style'=>'height:150px;')) !!}
+                          {!! Form::textarea('body', Request::get('body'), array('placeholder' => 'Description','required' => 'required','class' => 'form-control user-name-edit ckeditor','style'=>'height:150px;')) !!}
                         </div>      
                     </div>
                 </div>
