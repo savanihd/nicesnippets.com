@@ -101,6 +101,7 @@ Route::group(['middleware' => ['auth','IsAdmin']], function () {
 
     // SettingController
     Route::resource('settings','Admin\SettingController');
+    Route::get('db-backup', array('as'=> 'admin.backup', 'uses' => 'Admin\SettingController@dbBackup'));
 
     // TagController
     Route::resource('tags','Admin\TagController');

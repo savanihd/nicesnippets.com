@@ -83,6 +83,11 @@
           <i class="fa fa-th"></i> <span>Auto Generate Post</span>
         </a>
       </li>
+      <li class="{{ Request::is('db-backup*') ? 'active' : '' }}">
+        <a href="{{ URL::route('admin.backup') }}">
+          <i class="fa fa-database"></i> <span>Database</span>
+        </a>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->

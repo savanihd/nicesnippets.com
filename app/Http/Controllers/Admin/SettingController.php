@@ -33,4 +33,24 @@ class SettingController extends AdminController
 
         return redirect()->back();
     }
+
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function dbBackup()
+    {
+        $filename = "backup-" . \Carbon\Carbon::now()->format('Y-m-d') . ".gz";
+        $path = storage_path() . "/app/public/db/" . $filename;
+  
+        $command = "mysqldump --user=" . env('DB_USERNAME') ." --password=" . env('DB_PASSWORD') . " --host=" . env('DB_HOST') . " " . env('DB_DATABASE') . "  | gzip > " . $path;
+  
+        $returnVar = NULL;
+        $output  = NULL;
+  
+        exec($command, $output, $returnVar);
+
+        return response()->download($path)->deleteFileAfterSend(true);
+    }
 }
