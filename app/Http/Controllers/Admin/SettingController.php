@@ -42,7 +42,7 @@ class SettingController extends AdminController
     public function dbBackup()
     {
         $filename = "backup-" . \Carbon\Carbon::now()->format('Y-m-d') . ".gz";
-        $path = storage_path() . "/app/public/" . $filename;
+        $path = storage_path() . "/app/public/backup" . $filename;
   
         $command = "mysqldump --user=" . env('DB_USERNAME') ." --password=" . env('DB_PASSWORD') . " --host=" . env('DB_HOST') . " " . env('DB_DATABASE') . "  | gzip > " . $path;
   
