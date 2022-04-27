@@ -379,3 +379,8 @@ interdogmedia.com, 19030, DIRECT
 apacdex.com, 19030, DIRECT
 valueimpression.com, 19030, DIRECT
 quantumdex.io, 19030, DIRECT
+loopme.com, 11470, RESELLER, 6c8d5f95897a5a3b
+gumgum.com, 15581, RESELLER, ffdef49475d318a9
+yandex.com, 97790217, DIRECT
+onetag.com, 5927d926323dc2c, DIRECT
+indexexchange.com, 193216, RESELLER, 50b1c356f2c5c8fc
