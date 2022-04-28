@@ -201,8 +201,8 @@
             </div>
             --}}
 
-            <div class="row content-box-new latest-posts">
-                <div class="col-md-12 hed-sub-text random-posts-section">
+            <div class="row content-box advertisement-box">
+                <div class="col-md-12 hed-sub-text">
                     <script type="text/javascript" src="//services.vlitag.com/adv1/?q=800ea5925dfc7c3a4aca0c649b41d8c3"></script><script> var vitag = vitag || {};</script>
         <div class="adsbyvli" data-ad-slot="outstream"></div> <script> vitag.outStreamConfig = { type: "slider", position: "right" }; </script>  
                 </div>
