@@ -74,6 +74,9 @@
     </center>
 
     <div class="col-md-12 hed-sub-des">
+        
+        <div class="adsbyvli" style="width:728px; height:90px" data-ad-slot="vi_2190293151"></div> <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_2190293151") })</script>
+
   		@if(!empty($blog->image))
   		<div style="padding: 10px;">
   			<center><img class="img-responsive" src="{{ asset('/upload/blog/'.$blog->image)}}" alt="{{ $blog->title }}" style="width:100%; height:auto;"></center>
