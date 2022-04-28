@@ -341,6 +341,8 @@
 
 </script>
 
+<script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_2190293151") })</script>
+
   @yield('script')
 </body>
 
