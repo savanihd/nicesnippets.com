@@ -49,6 +49,10 @@ class BlogController extends Controller
 
     	$blog = $this->blog->getBlogDetail($slug);
 
+        if (is_null($blog)) {
+            return redirect()->route('home');
+        }
+
         view()->share('meta_title',$blog->title);
         view()->share('meta_description',$blog->meta_description);
         view()->share('meta_keyword',$blog->meta_description);
