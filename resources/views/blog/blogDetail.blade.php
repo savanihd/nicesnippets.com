@@ -74,8 +74,6 @@
     </center>
 
     <div class="col-md-12 hed-sub-des">
-        
-        <div class="adsbyvli" style="width:728px; height:90px" data-ad-slot="vi_2190293151"></div>
 
   		@if(!empty($blog->image))
   		<div style="padding: 10px;">
