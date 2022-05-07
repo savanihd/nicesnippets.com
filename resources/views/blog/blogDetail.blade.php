@@ -39,7 +39,7 @@
 
 @section('content')
     <div class="col-md-12">
-        <h1 class="p-0">{{ $blog->title }}</h1>
+        <h1 class="p-0">{{ $blog->title }} pp</h1>
     </div>
     <div class="col-md-12 hed-sub-text">
         <p><span><i class="fa fa-th"></i></span>
