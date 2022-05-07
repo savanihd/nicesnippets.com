@@ -207,7 +207,7 @@
 
             <div class="row content-box-new latest-posts">
                 <div class="col-md-12 hed-text ribbon-top latest-posts-ribbon">
-                    <h3>Latest Posts</h3>
+                    <h3>Latest Posts oo</h3>
                 </div>
                 <div class="col-md-12 hed-sub-text random-posts-section">
                   <ul>
