@@ -39,7 +39,7 @@
 
 @section('content')
     <div class="col-md-12">
-        <h1 class="p-0">{{ $blog->title }} pp</h1>
+        <h1 class="p-0">{{ $blog->title }}</h1>
     </div>
     <div class="col-md-12 hed-sub-text">
         <p><span><i class="fa fa-th"></i></span>
@@ -59,7 +59,7 @@
         <hr>
     </div>
 
-    {{-- <center>
+    <center>
         <div id="ezoic-pub-ad-placeholder-103">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Blog Detail top -->
@@ -71,7 +71,7 @@
              (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         </div>
-    </center> --}}
+    </center>
 
     <div class="col-md-12 hed-sub-des">
 
@@ -84,9 +84,9 @@
         @php
   			$des = str_replace("\n", "</p><p>", "<p>".$blog->body."</p>");
 
-			// $rr = '</strong><div class="row"><div class="col-md-6"><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Middle Box 1 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5716626356528112" data-ad-slot="4377210275" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div><div class="col-md-6"><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Middle Box - 2 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5716626356528112" data-ad-slot="6476211261" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div></div><br><div id = "v-nicesnippets"></div>';
+			$rr = '</strong><div class="row"><div class="col-md-6"><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Middle Box 1 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5716626356528112" data-ad-slot="4377210275" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div><div class="col-md-6"><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Middle Box - 2 --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5716626356528112" data-ad-slot="6476211261" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div></div><br><div id = "v-nicesnippets"></div>';
 
-			// $des = str_replace_description("</strong>", $rr, $des);
+			$des = str_replace_description("</strong>", $rr, $des);
 
 		@endphp
 
@@ -94,7 +94,7 @@
     </div>
 
     <hr>
-    {{-- <div id="ezoic-pub-ad-placeholder-103">
+    <div id="ezoic-pub-ad-placeholder-103">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Blog Bottom -->
     <ins class="adsbygoogle"
@@ -104,7 +104,7 @@
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    </div> --}}
+    </div>
 
     {{-- @if(isset($settingsFrontData['detail-add']))
         <div class="col-md-12 col-xs-12 add2-post post-detail-add" align="center">
