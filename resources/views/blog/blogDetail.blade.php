@@ -59,7 +59,7 @@
         <hr>
     </div>
 
-    <center>
+    {{-- <center>
         <div id="ezoic-pub-ad-placeholder-103">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Blog Detail top -->
@@ -71,7 +71,7 @@
              (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         </div>
-    </center>
+    </center> --}}
 
     <div class="col-md-12 hed-sub-des">
 
