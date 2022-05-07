@@ -94,7 +94,7 @@
     </div>
 
     <hr>
-    <div id="ezoic-pub-ad-placeholder-103">
+    {{-- <div id="ezoic-pub-ad-placeholder-103">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Blog Bottom -->
     <ins class="adsbygoogle"
@@ -104,7 +104,7 @@
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    </div>
+    </div> --}}
 
     {{-- @if(isset($settingsFrontData['detail-add']))
         <div class="col-md-12 col-xs-12 add2-post post-detail-add" align="center">
