@@ -176,8 +176,7 @@
           <div class="row">
           @yield('content')
 
-          {{-- <script type="text/javascript" src="//services.vlitag.com/adv1/?q=800ea5925dfc7c3a4aca0c649b41d8c3"></script><script> var vitag = vitag || {};</script>
-            <div class="adsbyvli" data-ad-slot="outstream"></div> <script> vitag.outStreamConfig = { type: "slider", position: "right" }; </script> --}}
+          
 
           </div>    
         </div>    
@@ -205,7 +204,6 @@
             </div>
             --}}
 
-            {{-- <div class="adsbyvli" style="width:300px; height:250px" data-ad-slot="vi_2190293150"></div> <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_2190293150") })</script>               --}}
 
             <div class="row content-box-new latest-posts">
                 <div class="col-md-12 hed-text ribbon-top latest-posts-ribbon">
