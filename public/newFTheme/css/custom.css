@@ -668,7 +668,3 @@ pre.prettyprint{
 	.gsc-search-button-v2:focus{
 		outline: none;
 	}
-    .step-start {
-        color: #595a5b !important;
-        border-left: 5px solid #595a5b !important;
-    }
