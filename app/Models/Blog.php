@@ -15,7 +15,7 @@ class Blog extends Model
     protected $table = 'blogs';
     
     protected $fillable = [
-        'title','slug','body','meta_description','image','total_view','is_publish','publish_date'
+        'title','slug','body','meta_description','image','total_view','is_publish','publish_date','is_small'
     ];
 
     // public function getBlog()
@@ -75,7 +75,7 @@ class Blog extends Model
 
     public function getLatestBlogs()
     {
-        return static::where('is_publish', '1')->latest()->paginate(10);
+        return static::where('is_publish', '1')->orderBy('is_small','ASC')->latest()->paginate(10);
     }
 
     public function getLatestBlogsLimit()

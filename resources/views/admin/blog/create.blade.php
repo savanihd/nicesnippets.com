@@ -108,6 +108,20 @@
 				    </div>		
 		  		</div>
 		  	</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Is Small? :</label><br>
+                       <div class="onoffswitch">
+                            <input type="checkbox" name="is_small" class="onoffswitch-checkbox is-small" id="myonoffswitchClass">
+                            <label class="onoffswitch-label" for="myonoffswitchClass">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>      
+                </div>
+            </div>
 		  </div>
 		  <!-- /.box-body -->
 
@@ -131,6 +145,7 @@
 			$('.publish-date-input').val('');
 		}
 	});
+
 	//Date picker
     $('#datepicker').datepicker({
       	autoclose: true
