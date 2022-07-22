@@ -80,7 +80,7 @@ class Blog extends Model
 
     public function getLatestBlogsLimit()
     {
-        return static::where('is_publish', '1')->latest()->take(5)->get();
+        return static::where('is_publish', '1')->orderBy('is_small','ASC')->latest()->take(5)->get();
     }
     
     public function blogCategoryConnect()
