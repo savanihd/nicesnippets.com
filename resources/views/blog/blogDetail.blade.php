@@ -34,6 +34,10 @@
     .recommended-posts-head ul{
         padding-left: 15px !important;
     }
+    .step-start{
+        color: #595a5b !important;
+        border-left: 5px solid #595a5b !important;
+    }
 </style>
 @endsection
 

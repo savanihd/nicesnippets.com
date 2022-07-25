@@ -76,6 +76,9 @@ class BlogController extends AdminController
             $input['slug'] = Str::slug( $input['title']);
 
             $input['is_publish'] = isset($input['is_publish']) ? '1' : '0';
+
+            $input['is_small'] =  isset($input['is_small']) ? '1' : '0';
+
             if (isset($input['publish_date']) && !empty($input['publish_date'])) {
                 $input['publish_date'] = \Carbon\Carbon::createFromFormat('m/d/Y', $input['publish_date'])->format('Y-m-d');
             }else{
@@ -159,6 +162,8 @@ class BlogController extends AdminController
             }
 
             $input['is_publish'] = isset($input['is_publish']) ? '1' : '0';
+            
+            $input['is_small'] =  isset($input['is_small']) ? '1' : '0';
             
             if (isset($input['publish_date']) && !empty($input['publish_date']) && $input['is_publish'] == '0') {
                 $input['publish_date'] = \Carbon\Carbon::createFromFormat('m/d/Y', $input['publish_date'])->format('Y-m-d');

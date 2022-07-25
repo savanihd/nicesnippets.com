@@ -214,11 +214,11 @@ Route::get('sitemap-blogs', function(){
 
         $sitemap = App::make("sitemap");
 
-         $posts = DB::table('blogs')->where('is_publish','1')->orderBy('created_at', 'desc')->get();
+         $posts = DB::table('blogs')->where('is_publish','1')->orderBy('updated_at', 'desc')->get();
 
          foreach ($posts as $post)
          {
-            $sitemap->add(route('blog.detail',$post->slug), $post->created_at, '1.0', 'daily');
+            $sitemap->add(route('blog.detail',$post->slug), $post->updated_at, '1.0', 'daily');
          }
 
          $sitemap->add(URL::to('/blog'), '2019-09-09T20:10:00+02:00', '1.0', 'daily');
