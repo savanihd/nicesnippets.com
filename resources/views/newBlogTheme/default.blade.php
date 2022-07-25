@@ -85,8 +85,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 <style type="text/css">
   h1, h3, h5, .content-part h2 {
-    font-family: 'Lilita One', cursive !important;
-    font-weight: normal !important;
+    font-weight:bold;
+    /*font-family: 'Lilita One', cursive !important;*/
   }
   .main-section h1{
     font-size: 40px !important;
